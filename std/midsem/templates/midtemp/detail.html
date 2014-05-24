@@ -1,0 +1,17 @@
+{% if s_info %}
+
+{{s_info}}
+
+    <ul>
+    {% for each in s_info.examresult_set.all %}
+        <li>{{ each.sub_name }} {{each.sub_mark}}</li>
+
+        {%empty%}
+        <li>Sorry, no result for {{s_info.enroll}} found..!!</li>
+    {% endfor %}
+    </ul>
+
+
+{% else %}
+    <p>No Data avialable are available.</p>
+{% endif %}

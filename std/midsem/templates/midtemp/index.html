@@ -1,0 +1,9 @@
+{% if std_list %}
+    <ul>
+    {% for each in std_list %}
+        <li><a href="/lk/{{ each.enroll }}/">{{ each.enroll }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No Lists are available.</p>
+{% endif %}
